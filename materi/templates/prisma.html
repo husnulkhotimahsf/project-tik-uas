@@ -1,0 +1,194 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#A0522D;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">UNTIRTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                Materi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFDAB9;">
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'balok' %} active {% endif %}" href="{% url 'balok' %}" style="color:	#000000">BALOK</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'applet' %} active {% endif %}" href="{% url 'applet' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF"">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#FFFFFF">Data Mahasiswa</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+
+        <center>  
+          <body bgcolor="#F5FFFA">
+          <font size="6"><strong>BAB III
+          <p>Prisma</p></strong></font>
+          </center>
+          <br></br>
+        
+          <h2>A.  Pengertian Prisma</h2>
+          <center><img src="https://i.postimg.cc/Jnw9Bn2b/pmm-22.png" width ="470px" height="270px"></center>
+            <center><font size="2">Macam-macam Prisma</font></center>
+            <font size="4"><p style="text-indent: 30px;">Perhatikan gambar bangun ruang diatas. Gambar tersebut menunjukkan beberapa contoh dari Prisma. Prisma adalah bangun ruang yang mempunyai bidang alas dan bidang atas yang sejajar dan kongruen, sisi lainnya dapat berupa sisi tegak berbentuk jajargenjang atau persegi Panjang yang tegak lurus.</p></font>
+          
+          <br></br>
+          <h2>B.  Unsur-unsur Prisma</h2>
+          <center><img src="https://i.postimg.cc/JzkxHqV2/pmm-23.png" width ="350px" height="290px"></center>
+            <center><font size="2">Unsur-unsur Prisma</font></center>
+           <ul class="unsurprisma"></ul>
+            <font size="4"><li style="text-indent: 30px;">Tinggi Prisma</li></font>
+            <font size="4"><p style="text-indent: 55px;">Tinggi prisma adalah jarak antara bidang alas dengan bidang atas.</p>
+                <font size="4"><li style="text-indent: 30px;">Titik Sudut</li></font>
+                <font size="4"><p style="text-indent: 55px;">Titik sudut prisma merupakan titik potong atau titik temu dari ketiga rusuk atau lebih. Jumlah titik sudut pada prisma menyesuaikan dengan jenis prisma itu sendiri.</p>
+                <p>Banyak Titik Sudut = 2 x n</p></font>
+                <font size="4"><li style="text-indent: 30px;">Rusuk</li></font>
+                <font size="4"><p style="text-indent: 55px;">Rusuk adalah pertemuan antara dua buah titik sudut atau garis potong antara dia sisi/bidang Prisma. Jumlah rusuk pada prisma menyesuaikan dengan jenis prisma itu sendiri. Sebagai contoh kita ambil prisma segitiga. Prisma tersebut mempunyai 9 buah rusuk.</p>
+                <p>Banyak Rusuk = 3 x n</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang/Sisi</li></font>
+                <font size="4"><p style="text-indent: 55px;">Sisi atau bidang pada prisma menyesuaikan jenis prisma. Jika alas prisma berbentuk segi enam, maka terdapat 8 sisi atau bidang yang dimiliki oleh prisma. Begitu juga dengan prisma segi tiga, maka terdapat 5 sisi atau bidang yang dimiliki oleh prisma segitiga.</p>
+                <p>Banyak sisi = n+2</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Sisi</li></font>
+                <font size="4"><p style="text-indent: 55px;">Sisi atau bidang pada prisma menyesuaikan jenis prisma. Jika alas prisma berbentuk segi enam, maka terdapat 8 sisi atau bidang yang dimiliki oleh prisma. Begitu juga dengan prisma segi tiga, maka terdapat 5 sisi atau bidang yang dimiliki oleh prisma segitiga.</p>
+                <p>Banyak sisi = n+2</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Ruang</li></font>
+                <font size="4"><p style="text-indent: 55px;">Diagonal ruang prisma adalah garis yang menghubungkan titik sudut pada alas dengan titik sudut pada bidang atas yang tidak terletak pada sisi tegak yang sama.</p>
+                <p>diagonal ruang prisma segi n = n(n-3)</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang Diagonal</li></font>
+                <font size="4"><p style="text-indent: 55px;">Bidang diagonal prisma adalah bidang yang memuat diagonal bidang alas dan diagonal bidang atas dan keduanya sejajar. Pada prisma segienam terdapat dua buah diagonal yang sejajar.</p>
+                <p>Banyak bidang diagonal prisma segi n prisma segi n=  <sup>(n(n-3))</sup>⁄<sub>2</sub></p></font>
+                <center><table border="3" cellpadding="10">
+            <tr bgcolor="#8FBC8F">
+              <td><strong><center>Untuk n genap</center></strong></td>
+              <td><strong><center>Untuk n ganjil</center></strong></td>
+            </tr>
+            <tr>
+              <td bgcolor="#F5FFFA"><sup>(n(n-1))</sup>⁄<sub>2</sub></td>
+              <td bgcolor="#F5FFFA"><sup>(n(n-3))</sup>⁄<sub>2</sub></td>
+            </tr>
+            </table></center>
+        
+        <br></br>
+          <h2>C.  Sifat-sifat Prisma</h2>
+          <ol>
+                <font size="4">
+                  <li style="text-indent: 30px;">a. Bentuk alas dan atap kongruen (sama dan sebangun)</li>
+                  <li style="text-indent: 30px;">b. Setiap sisi bagian samping berbentuk persegi Panjang atau jajar genjang</li>
+                  <li style="text-indent: 30px;">c. Umumnya memiliki rusuk tegak</li>
+                  <li style="text-indent: 30px;">d. Setiap diagonal bidang pada sisi yang sama dan ukuran yang sama</li>
+                </font>
+            </ol>
+        
+        <br></br>
+          <h2>D.  Jaring-jaring Prisma</h2>
+          <center><table border="3" cellpadding="10">
+            <tr bgcolor="#EEE8AA">
+              <td><img src="https://i.postimg.cc/fW8BGyfB/pmm-24.png" width ="250px" height="190px">
+              <center><font size="2">Jaring-Jaring Prisma Segitiga</font></center></td>
+              <td><img src="https://i.postimg.cc/FKbxDHKb/pmm-25.png" width ="250px" height="190px">
+              <center><font size="2">Jaring-Jaring Prisma Empat</font></center></td>
+            </tr>
+            <tr>
+              <td bgcolor="#EEE8AA"><img src="https://i.postimg.cc/jjYXH7Rd/pmm-26.png" width ="250px" height="190px">
+                <center><font size="2">Jaring-Jaring Prisma Segi Lima</font></center></td>
+              <td bgcolor="#EEE8AA"><img src="https://i.postimg.cc/sD1wszny/pmm-27.png" width ="250px" height="190px">
+                <center><font size="2">Jaring-Jaring Prisma Segi Enam</font></center></td>
+            </tr>
+          </table></center>
+        
+        <br></br>
+          <h2>E.  Ciri-ciri dan Macam-macam Prisma</h2>
+          <font size="4"><p>Prisma dapat dibedakan menjadi 2:</p>
+                <p> A. Berdasarkan rusuk tegaknya</p>
+                    <ul class="unsurprisma"></ul>
+                        <li  style="text-indent: 30px;">Prisma Tegak</li>
+                          <center><img src="https://i.postimg.cc/9fXBgjwv/pmm-28.png" width ="220px" height="310px"></center>
+                        <li style="text-indent: 30px;">Prisma Miring</li>
+                          <center><img src="https://i.postimg.cc/8Cymqnhs/pmm-29.png" width ="250px" height="190px"></center>
+                <p>B. Berdasarkan bentuk alasnya</p>
+                    <ul class="unsurprisma"></ul>
+                      <li style="text-indent: 30px;">Prisma Segitiga</li>
+                        <center><img src="https://i.postimg.cc/Df4PM6my/pmm-30.png" width ="250px" height="190px"></center>
+                        <li style="text-indent: 30px;">Prisma Segi Empat</li>
+                          <center><img src="https://i.postimg.cc/hvm8QDN7/pmm-31.png" width ="220px" height="310px"></center>
+                        <li style="text-indent: 30px;">Prisma Segi Enam</li>
+                          <center><img src="https://i.postimg.cc/85jmDBH4/pmm-32.png" width ="220px" height="310px"></center>
+                        <li style="text-indent: 30px;">Dan seterusnya</li>
+                </font>
+        
+        <br></br>
+          <h2>F.  Luas Permukaan Prisma</h2>
+          <font size="4"><p style="text-indent: 30px;">Luas Permukaan Prisma = (2 x luas alas)+(keliling alas x tinggi prisma).</p></font>
+        
+        <br></br>
+          <h2>G.  Volume Prisma</h2>
+          <font size="4"><p style="text-indent: 30px;">Volume Prisma =Luas alas x tinggi prisma.</p></font>
+        
+        <br></br>
+          <h2>H. Video Pembelajaran Prisma</h2>
+          <center>
+            <iframe style="width: 870px;height: 490px;"type="text/html" src="https://www.youtube.com/embed/RdGgrBkLM9A?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+          </center>
+        
+        <br></br>
+          <h2>I. Latihan Soal Prisma</h2>
+          <font size="4">
+                <p style="text-indent: 30px;">1. Sebuah prisma segitiga mempunyai panjang alas 25 cm, tinggi 14 cm. Jika tinggi prisma 22 cm, maka volumenya ... cm³.</p>
+                <p style="text-indent: 30px;">2. Volume prisma segitiga 4.224 cm³  . Jika panjang alas segitiga 24 cm dan tinggi segitiga 16 cm, maka tinggi prisma ... cm.</p>
+                <p style="text-indent: 30px;">3. Sebuah prisma alasnya berbentuk segitiga siku-siku. Jika panjang sisinya 6 cm, 8 cm serta 10 cm, dan tinggi prisma tersebut adalah 15 cm, maka luas permukaan prisma tersebut ... cm².</p>
+                <p style="text-indent: 30px;">4. Adik membuat prakarya berbentuk prisma segitiga yang kerangkanya terbuat dari bambu. Jika alasnya berbentuk segitiga sama sisi berukuran panjang sisi 15 cm, dan tinggi prisma tersebut 20 cm, maka bambu yang digunakan untuk kerangka prisma panjangnya ... cm.</p>
+                <p style="text-indent: 30px;">5. Alas suatu prisma tegak segitiga beraturan adalah segitiga samasisi. Panjang sisi alas dan tinggi prisma tersebut adalah 6 cm. hitunglah volume prisma!</p>
+                <p style="text-indent: 30px;">6. Sebuah prisma alasnya berbentuk laang-laang dengan panhang diagonal 19 cm dan 12 cm. hitunglah volume prism ajika tinggi prisma 11 cm!</p>
+                <p style="text-indent: 30px;">7. Diketahui volume prisma 450 cm³. alas prisma berbentuk siku-siku dengan Panjang sisi 5 cm, 13 cm, 12 cm. hitunglah tinggi prisma!</p>
+                <p style="text-indent: 30px;">8. Prisma memiliki alas segi lima dengan sisi s = 12 cm. Tinggi prisma tersebut adalah 20 cm. Hitunglah volume prisma di atas!</p>
+                <p style="text-indent: 30px;">9. Diketahui sebuah prisma segi lima sama sisi yang memiliki volume 430 cm³. Apabila tinggi prisma tersebut adalah 10 cm. Tentukan panjang sisi limas segi lima!</p>
+                <p style="text-indent: 30px;">10. Jaring-jaring dari prisma segitiga adalah sebagaimana gambar di atas. Dapat kita lihat terdapat 2 bidang segitiga dan 3 bidang persegi panjang. Luas permukaan prisma adalah total luas keseluruhan bidang-bidang tersebut.</p>
+            </ol></font>
+        </section>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>

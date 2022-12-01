@@ -1,0 +1,182 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#A0522D;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">UNTIRTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                Materi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFDAB9;">
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'balok' %} active {% endif %}" href="{% url 'balok' %}" style="color:	#000000">BALOK</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'applet' %} active {% endif %}" href="{% url 'applet' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF"">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#FFFFFF">Data Mahasiswa</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+
+        <center>  
+          <body bgcolor="#F5FFFA">
+          <font size="6"><strong>BAB IV
+          <p>Limas</p></strong></font>
+          </center>
+          <br></br>
+        
+          <h2>A.  Pengertian Limas</h2>
+          <center><img src="https://i.postimg.cc/T1Qd9g88/pmm-33.png" width ="570px" height="190px"></center>
+            <center><font size="2">Macam-macam Limas</font></center>
+            <font size="4"><p  style="text-indent: 30px;">Limas adalah bangun ruang yang mempunyai alas berbentuk segi banyak (segiempat, segitiga, segilima, dan seterusnya) dan bidang sisi tegaknya berbentuk segitiga yang berpotongan pada satu titik. Seperti prisma juga diberi nama berdasarkan bentuk alasnya.</p></font>
+          
+          <br></br>
+          <h2>B.  Unsur-unsur Limas</h2>
+          <ul class="unsurlimas"></ul>
+          <center><img src="https://i.postimg.cc/9XBQC5Dx/pmm-34.png" width ="350px" height="290px"></center>
+            <center><font size="2">Unsur-Unsur Limas</font></center>
+           <ul class="unsurprisma"></ul>
+                <font size="4"><li style="text-indent: 30px;">Tinggi Limas</li></font>
+            <font size="4"><p style="text-indent: 55px;">Tinggi limas adalah jarak terpendek dari puncak limas ke sisi alas. Tinggi limas tegak lurus dengan titik potong sumbu simetri bidang alas. Pada limas segi empat T.ABCD, TO adalah tinggi limas.</p>
+                <font size="4"><li style="text-indent: 30px;">Titik Sudut</li></font>
+                <font size="4"><p style="text-indent: 55px;">Titik sudut prisma merupakan titik potong atau titik temu dari ketiga rusuk atau lebih. Jumlah titik sudut pada prisma menyesuaikan dengan jenis prisma itu sendiri.</p>
+                <p>Banyak Titik Sudut = 2 x n</p></font>
+                <font size="4"><li style="text-indent: 30px;">Rusuk</li></font>
+                <font size="4"><p style="text-indent: 55px;">Rusuk adalah pertemuan antara dua buah titik sudut atau garis potong antara dia sisi/bidang Limas. Banyak rusuk pada limas segi-n adalan 2n buah</p>
+                <p>Banyak Rusuk = 2 x n</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang/Sisi</li></font>
+                <font size="4"><p style="text-indent: 55px;">Bidang sisi adalah bidang ang terdiri dari bidang alas dan bidang sisi tegak. Bidang alas adalah bidang yang merupakan alas dari suatu limas. Bidang sisi tegak adalah bidang yang memotong bidang alas.</p>
+                <p style="text-indent: 55px;">Setiap limas memiliki sisi samping yang berbentuk segitiga. Pada limas T.ABC sisi-sisi yang terbentuk adalah sisi ABC (alas), TAB, TBC dan TAC.</p>
+                <p>Banyak Sisi = n+1</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Bidang/Sisi</li></font>
+                <font size="4"><p style="text-indent: 55px;">Banyak diagonal bidang pada limas menyesuaikan dengan bentuk alas limas itu sendiri.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Ruang</li></font>
+                <font size="4"><p style="text-indent: 55px;">Untuk diagonal ruang menesuaikan dengan banyaknya doagonal bidang pada limas.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang Diagonal</li></font>
+                <font size="4"><p style="text-indent: 55px;">Limas T.ABCD dengan alas segiempat. Diagonal bidang pada gambar diatas adalah AC dan BD. Sedangkan bidang diagonalnya adalah TAC dan TBD.</p></font>
+        
+        <br></br>
+          <h2>C.  Sifat-sifat Limas</h2>
+          <ul class="unsurlimas"></ul>
+                <li style="text-indent: 30px;">Alasnya berbentuk segi banyak (segitiga, segiempat, segilima dan seterusnya) nama limas disesuaikan dengan bentuk sudut alasnya</li>
+                <li style="text-indent: 30px;">Memiliki titik puncak yang merupakan pertemuan dari beberapa uah segitiga</li>
+                <li style="text-indent: 30px;">Memiliki tinggi yang merupakan jarak antara titik puncak ke alas limas</li>
+                <li style="text-indent: 30px;">Memiliki bidang sisi, titik sudut, dan rusuk</li>
+        
+        <br></br>
+          <h2>D.  Jaring-jaring Limas</h2>
+          <center><table border="3" cellpadding="10">
+            <tr bgcolor="#EEE8AA">
+              <td><img src="https://i.postimg.cc/fR1wBMPb/pmm-35.png" width ="250px" height="190px">
+              <center><font size="2">Jaring-Jaring Limas Segitiga</font></center></td>
+              <td><img src="https://i.postimg.cc/5NNNt7vf/pmm-36.png" width ="250px" height="190px">
+              <center><font size="2">Jaring-Jaring Limas Empat</font></center></td>
+            </tr>
+            <tr>
+              <td bgcolor="#EEE8AA"><img src="https://i.postimg.cc/zGyzCy0M/pmm-37.png" width ="250px" height="190px">
+                <center><font size="2">Jaring-Jaring Limas Segi Lima</font></center></td>
+              <td bgcolor="#EEE8AA"><img src="https://i.postimg.cc/Jn6Y5zT6/pmm-38.png" width ="250px" height="190px">
+                <center><font size="2">Jaring-Jaring Limas Segi Enam</font></center></td>
+            </tr>
+          </table></center>
+        
+        <br></br>
+          <h2>E.  Ciri-ciri dan Macam-macam Limas</h2>
+          <font size="4"><p>Prisma dapat dibedakan menjadi 2:</p>
+                <p>Ciri-ciri Limas</p>
+                        <ul class="unsurlimas"></ul>
+                        <li style="text-indent: 30px;" style="text-indent: 30px;">Limas memiliki satu sisi alas dan tidak memili sisi atas (tutup)</li>
+                        <li style="text-indent: 30px;">Titik puncak dan titik sudut sisi alas dihubungkan oleh rusuk tegak</li>
+                        <li style="text-indent: 30px;">Semua sisi tegak limas berbentuk segitiga</li></ul>
+                        <br></br>
+                <p>Macam-macam Limas</p>
+                        <ul class="unsurlimas"></ul>
+                        <li style="text-indent: 30px;">Limas Segitiga</li>
+                        <center><img src="https://i.postimg.cc/pVS19y5y/pmm-39.png" width ="250px" height="230px"></center>
+                        <li style="text-indent: 30px;">Limas Segi Empat</li>
+                        <center><img src="https://i.postimg.cc/sxbnb0C5/pmm-40.png" width ="250px" height="210px"></center>
+                        <li style="text-indent: 30px;">Limas Segi Lima</li>
+                        <center><img src="https://i.postimg.cc/WzdWWcC2/pmm-41.png" width ="250px" height="210px"></center>
+                        <li style="text-indent: 30px;">Limas Segi Enam</li>
+                        <center><img src="https://i.postimg.cc/pXncKxKC/pmm-42.png" width ="250px" height="230px"></center>
+                        <li style="text-indent: 30px;">Dan Limas Segi-n</li>
+                </li></font>
+        
+        <br></br>
+          <h2>F.  Luas Permukaan Limas</h2>
+          <font size="4"><p style="text-indent: 30px;">Luas Permukaan Limas = L alas+L sisi tegak</p></font>
+        
+        <br></br>
+          <h2>G.  Volume Limas</h2>
+          <font size="4"><p style="text-indent: 30px;">Volume =  <sup>1</sup>⁄<sub>3</sub>  x L limas x tinggi</p></font>
+        
+        <br></br>
+          <h2>H. Video Pembelajaran Limas</h2>
+          <center>
+            <iframe style="width: 870px;height: 490px;"type="text/html" src="https://www.youtube.com/embed/rJVP7vuWN7g?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+          </center>
+        
+        <br></br>
+          <h2>I. Latihan Soal Limas</h2>
+          <font size="4">
+                <p style="text-indent: 30px;">1. Diketahui sebuah limas memiliki alas berbentuk segitiga dengan panjang 9 cm dan tingginya 12 cm. Jika tinggi limas 15 cm, maka volumenya ... cm³.</p>
+                <p style="text-indent: 30px;">2. Volume dari sebuah limas segitiga adalah 672 cm³. Jika ukuran alas limas berturut-turut 12 cm dan 16 cm, maka tinggi dari limas tersebut ... cm.</p>
+                <p style="text-indent: 30px;">3. Diketahui sebuah limas dengan sisi alas berbentuk persegi memiliki volume 125 cm³. Jika tinggi limas adalah 15 cm, berapa panjang sisi alas limas persegi tersebut?</p>
+                <p style="text-indent: 30px;">4. Diketahui sebuah limas memiliki volume 300 cm³. Jika luas alas limas adalah 90 cm², berapa tinggi limas persegi tersebut?</p>
+                <p style="text-indent: 30px;">5. Sebuah limas segitiga memiliki luas alas 24 cm² dan luas sisi tegaknya adalah 10 cm². Hitunglah berapa luas permukaan limas segitiga tersebut!</p>
+                <p style="text-indent: 30px;">6. Diketahui sebuah limas segi empat persegi memiliki luas permukaan 260 cm². Jika luas sebuah sisi tegaknya adalah 40 cm², berapa panjang sisi alas limas tersebut?</p>
+                <p style="text-indent: 30px;">7. Sebuah limas segi empat volumenya 4.725 cm³. Jika tingginya 27 cm, maka luas alas limas tersebut ...  cm².</p>
+                <p style="text-indent: 30px;">8. Sebuah limas segi empat memiliki alas berbentuk persegi dengan panjang sisi 50 cm. Jika tinggi sisi tegak 75 cm, maka luas permukaannya ...  cm².</p>
+                <p style="text-indent: 30px;">9. Volume dari sebuah limas segitiga adalah 3.570 cm³. Jika ukuran alas limas berturut-turut 18 cm dan 34 cm, tentukan tinggi dari limas tersebut !</p>
+                <p style="text-indent: 30px;">10. Budi sedang membuat prakarya berbentuk limas segitiga yang kerangkanya terbuat dari bambu dan permukaannya dari kertas. Alas dan sisi tegaknya berbentuk segitiga sama sisi, jika panjang sisinya 30 cm, dan tinggi segitiga 25cm. Tentukan panjang kerangka dan luas permukaan prakarya Budi?</p>
+            </font>
+        
+        </section>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>

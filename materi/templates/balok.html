@@ -1,0 +1,164 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#A0522D;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">UNTIRTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                Materi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFDAB9;">
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'balok' %} active {% endif %}" href="{% url 'balok' %}" style="color:	#000000">BALOK</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'applet' %} active {% endif %}" href="{% url 'applet' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF"">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#FFFFFF">Data Mahasiswa</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+
+        <br><center>  
+          <body bgcolor="#F5FFFA">
+          <font size="6"><strong>BAB II
+          <p>Balok</p></strong></font>
+          </center></br>
+
+          <h2>A.  Pengertian Balok</h2>
+          <center><img src="https://i.postimg.cc/dt4PSJhY/pmm-13.png" width ="250px" height="190px"></center>
+            <center><font size="2">Balok dalam kehidupan sehari-hari</font></center><br></br>
+          <center><img src="https://i.postimg.cc/SR4FHsLy/pmm-14.png" width ="250px" height="190px"></center>
+            <center><font size="2">Balok</font></center>
+          <font size="4"><p style="text-indent: 30px;">Banyak sekali benda-benda yang ada disekitar kita yang mempunyai bentuk seperti balok. Misalnya, penghapus, kotak korek api, lemari, akuarium, kulkas, dan masih banyak lagi. Balok adalah bangun ruang yang mempunyai tiga pasang sisi yang berhadapan dan memiliki bentuk dan ukuran yang sama, dimana setiap sisinya berbentuk persegi Panjang. Berbeda dengan kubus dimana seluruh sisinya kongruen berbentuk persegi, akan tetapi pada balok hanya sisi yang berhadapan yang sama besar.</p></font>
+        
+        <br></br>
+          <h2>B.  Unsur-unsur Balok</h2>
+           <ul class="unsurbalok"></ul>
+                <font size="4"><li style="text-indent: 30px;">Titik Sudut</li></font>
+                <center><img src="https://i.postimg.cc/C54T0gJb/pmm-16.png" width ="250px" height="190px"></center>
+            <center><font size="2">Titik Sudut Balok</font></center>
+            <font size="4"><p style="text-indent: 55px;">Titik sudut Balok merupakan titik potong atau titik temu dari ketiga rusuk atau lebih. Titik sudut pada balok berjumlah 8 titik. Pada balok ABCD.EFGH terdapat 8 buat titik sudut, yakni : A, B, C, D, E, F, G, H.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Rusuk</li></font>
+                <font size="4"><p style="text-indent: 55px;">Rusuk balok adalah pertemuan antara dua buah titik sudut atau garis potong antara dia sisi/bidang balok. Seperti contoh balok ABCD.EFGH dibawah ini, maka rusuk pada balok tersebut ialah AB, BC, CD, DA, EF, FG, GH, HE, AE, BF, CG, dan DH. Banyak rusuk pada balok ada 12 buah.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang/Sisi</li></font>
+                <center><img src="https://i.postimg.cc/8kdVMRDs/pmm-15.png" width ="250px" height="190px"></center>
+            <center><font size="2">Bidang/Sisi Balok</font></center>
+            <font size="4"><p style="text-indent: 55px;">Sisi pada balok berbentuk persegi Panjang, terdiri dari bagian atas, bawah, samping kiri dan kanan, dan belakang. Seperti contoh balok ABCD.EFGH dibawah ini, maka sisi balok tersebut ialah sisi ABCD, BCGF, ADFH, EFGH, CDHG, ABFE. Banyak sisi balok ada 6 buah.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Sisi</li></font>
+                <center><img src="https://i.postimg.cc/bNzfTZNg/pmm-17.png" width ="410px" height="290px"></center>
+            <center><font size="2">Diagonal Sisi Balok</font></center>
+            <font size="4"><p style="text-indent: 55px;">Diagonal sisi adalah pertemuan antara dua buah titik sudut yang berada pada rusuk yang berbeda. Diagonal sisi pada balok ABCD.EFGH ialah AE, BF, BG, FC, FD, AH, AC, DB, HF, FG, CH, GD. Diagonal sisi pada balok ada 12 buah.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Diagonal Ruang</li></font>
+                <center><img src="https://i.postimg.cc/zBn4wrs4/pmm-18.png" width ="250px" height="290px"></center>
+            <center><font size="2">Diagonal Ruang Balok</font></center>
+            <font size="4"><p style="text-indent: 55px;">Diagonal ruang adalah pertemuan atara dua buah titik sudut yang berada pada sisi yang berbeda. Diagonal ruang pada balok ABCD.EFGH ialah AG, HB, FC, DE, DF, CF. diagonal ruang pada balok ada 6 buah.</p></font>
+                <font size="4"><li style="text-indent: 30px;">Bidang Diagonal</li></font>
+                <center><img src="https://i.postimg.cc/rsjbb9FJ/pmm-19.png" width ="370px" height="290px"></center>
+            <center><font size="2">Bidang Diagonal Balok</font></center>
+            <font size="4"><p style="text-indent: 55px;">Diagonal bidang adalah garis yang menghubungkan dua buah titik sudut yang saling berhadapan dalam satu bidang. Pada balok ABCD.EFGH diagonal bidangnya ialah ABGH, EFCD, BCHE, FGDA, BFHG, dan AEGC. Diagonal bidang pada balok ada 6 buah.</p></font>
+        
+        <br></br>
+          <h2>C.  Sifat-sifat Balok</h2>
+          <ol type='a'>
+                <font size="4"><li style="text-indent: 30px;">a. Balok paling sedikit mempunyai dua pasang sisi yang berbentuk persegi panjang</li></font>
+                <font size="4"><li style="text-indent: 30px;">b. Rusuk yang sejajar memiliki ukuran yang sama panjang</li></font>
+                <font size="4"><li style="text-indent: 30px;">c. Pada masing-masing diagonal bidang pada sisi yang berhadapan berukuran sama panjang</li></font> 
+                <font size="4"><li style="text-indent: 30px;">d. Masing-masing diagonal ruang pada balok mempunyai ukuran sama panjang</li></font>
+                <font size="4"><li style="text-indent: 30px;">e. Masing-masing bidang diagonalnya berbentuk persegi panjang</li></font>
+            </ol>
+        
+        <br></br>
+          <h2>D.  Jaring-jaring Balok</h2>
+          <center><img src="https://i.postimg.cc/SRk3DPqR/pmm-20.png" width ="250px" height="190px"></center>
+            <center><font size="2">Jaring-jaring Balok</font></center>
+            <font size="4"><p style="text-indent: 30px;">Jika balok dipotong berdasarkan rusuk-rusuknya, lalu masing-masing sisinya direntangkan maka akan menghasilkan suatu bangun datar yang biasa disebut jaring-jaring kubus. Pada bangun ruang balok terdapat 11 macam jarring-jaring balok dengan susunan berbeda satu sama lain.</p></font>
+          <center><img src="https://i.postimg.cc/MZmhvzbQ/pmm-21.png" width ="250px" height="360px"></center>
+            <center><font size="2">Macam-macam Jaring-jaring Balok</font></center>
+        
+        <br></br>
+          <h2>E.  Luas Permukaan Balok</h2>
+          <font size="4"><p style="text-indent: 30px;">Untuk mencari luas permukaan balok, kita dapat mulai dengan melihat jarring jarring balok terlebih dahulu.</p>
+          <p style="text-indent: 30px;">Dari gambar diatas, kita misalkan:</p>
+          <p style="text-indent: 30px;">p = Panjang balok</p>
+          <p style="text-indent: 30px;">l = Lebar balok</p>
+          <p style="text-indent: 30px;">t = Tinggi balok</p>
+          <p style="text-indent: 30px;">lp Balok = 2 x pt pl x lt = 2(pt+pl = lt)</p></font>
+        
+        <br></br>
+          <h2>F.  Volume Balok</h2>
+          <font size="4"><p style="text-indent: 30px;">Untuk menemukan rumus volume balok yang kita butuhkan adalah menghitung Panjang x lebar x tinggi balok. Misalkan:</p>
+          <p style="text-indent: 30px;">p = Panjang balok</p>
+          <p style="text-indent: 30px;">l = Lebar balok</p>
+          <p style="text-indent: 30px;">t = Tinggi balok</p>
+          <p style="text-indent: 30px;">V = p x l x t</p></font>
+        
+        <br></br>
+          <h2>G. Video Pembelajaran Balok</h2>
+          <center>
+            <iframe style="width: 870px;height: 490px;"type="text/html" src="https://www.youtube.com/embed/BkmA6NIAco4?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+          </center>
+        
+        <br></br>
+          <h2>H. Latihan Soal Balok</h2>
+          <font size="4">
+                <p style="text-indent: 30px;">1. Suatu balok memiliki panjang 10 cm lebar 5 cm dan tinggi 8 cm. Maka berapakah volum balok ?</p>
+                <p style="text-indent: 30px;">2. Suatu balok ABCDEFGH memiliki volme 672 dengan panjang 12 lebar 8. Maka tentukan tingginnya ?</p>
+                <p style="text-indent: 30px;">3. Suatu balok dengan panjang 12 cm , lebar 5 cm , dan tinggi 10 cm. Tentukanlah diagonal ruang dan diagonal-siagonal sisinya!</p>
+                <p style="text-indent: 30px;">4. Suatu balok ABCDEFGH memiliki panjang AB = 8 cm, BC = 6cm, dan AE = 4 akan di cat bagian luarnya tentukanlah luas permukaannya ?</p>
+                <p style="text-indent: 30px;">5. Suatu balok di susun oleh 3 buah kubus sama besar dengan trusuk 5 cm, susunan tersebut memanjang. Tentukanlah luas pemukaan balok tersebut!</p>
+                <p style="text-indent: 30px;">6. Suatu kardus dengan panjang 16 cm lebar 12 cm dan tinggi 10 cm akan di isi dengan kubus yang sisinya 2 cm. Tentukan banyak kubus yang dapat di masukkan pada balok!</p>
+                <p style="text-indent: 30px;">7. Suatu balok dengan panjang (2a + 3), lebar (a + 3) dan tinggi 12. Tentukan volumenya !</p>
+                <p style="text-indent: 30px;">8. Balok A memiliki ukuran 12 x 6 x 7 sementara balok B memiliki ukuran 6 x 3 x 4. Tentukan perbandingan volume kedua balok tersebut!</p>
+                <p style="text-indent: 30px;">9. Sebuah kerangka balok dengan ukuran 11cm x 12cm x 13cm akan di buat dari kawat dengan panjang kawat 45 m. Tentukan sisa kawat ?</p>
+                <p style="text-indent: 30px;">10. Paman akan membuat kotak peralatan berbentuk balok. Lebar kotak tersebut 30 cm, dengan panjang 3/2 kali lebarnya dan tinggi kotak 1/3 dari ukuran panjang. Berapakah volume kotak yang akan dibuat paman?</p>
+            </font>
+        
+        </section>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>

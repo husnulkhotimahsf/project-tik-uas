@@ -1,0 +1,192 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:#A0522D;">
+      <div class="container-fluid">
+        <img src="{% static 'logo.png' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#FFFFFF">UNTIRTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'profile' %} active {% endif %}" href="{% url 'profile' %}" style="color:	#FFFFFF">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#FFFFFF">
+                Materi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFDAB9;">
+                <li><a class="dropdown-item {% if dropdown == 'kubus' %} active {% endif %}" href="{% url 'kubus' %}" style="color:	#000000">KUBUS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'balok' %} active {% endif %}" href="{% url 'balok' %}" style="color:	#000000">BALOK</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'prisma' %} active {% endif %}" href="{% url 'prisma' %}" style="color:	#000000">PRISMA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'limas' %} active {% endif %}" href="{% url 'limas' %}" style="color:	#000000">LIMAS</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'applet' %} active {% endif %}" href="{% url 'applet' %}" style="color:	#000000">APPLET GEOGEBRA</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#FFFFFF"">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if navbar == 'mahasiswa' %} active {% endif %}" href="{% url 'mahasiswa' %}" style="color:	#FFFFFF">Data Mahasiswa</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      <!--penutup navbar-->
+
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <br></br>
+      <section class="container">
+
+        <center>  
+          <body bgcolor="#F5FFFA">
+          <font size="6"><strong>BAB I
+          <p>Kubus</p></strong></font>
+          </center>
+        <br></br>
+        
+          <h2>A.  Pengertian Kubus</h2>
+            <font size="4"><p style="text-indent: 30px;">Kubus adalah suatu bangun ruang tiga dimensi yang memiliki enam sisi yang sama yang berupa bujur sangkar. Kubus dikenal dengan nama lain yaitu bidang enam beraturan dan juga prisma segiempat, karena tingginya sama dengan sisi alas. 
+          Bangun Kubus sering kita jumpai dalam kehidupan sehari-hari, seperti rubik, dadu, kotak kado, es batu, gula batu, kotak karton, dan lain-lain.</p></font>
+              <center>
+              <img src="https://i.postimg.cc/MTfFNhpD/pmm-2.png" width ="350px" height="340px">
+              </center>
+              <center><font size="2">Contoh Kubus dalam Kehidupan Sehari-hari</font></center>
+        
+              <br></br>
+          <h2>B.  Sifat-Sifat Kubus</h2>
+          <center><table border="3" cellpadding="10">
+            <tr bgcolor="#8FBC8F">
+              <td><strong><center>No</center></strong></td>
+              <td><strong><center>Sifat-Sifat Kubus</center></strong></td>
+            </tr>
+            <tr>
+              <td bgcolor="#F5FFFA">1</td>
+              <td bgcolor="#F5FFFA">Seluruh sisi pada kubus berbentuk persegi dan mempunyai luas yang sama</td>
+            </tr>
+            <tr>
+              <td bgcolor="#F5FFFA">2</td>
+              <td bgcolor="#F5FFFA">Seluruh rusuk pada kubus memiliki panjang yang sama</td>
+            </tr>
+            <tr>
+              <td bgcolor="#F5FFFA">3</td>
+              <td bgcolor="#F5FFFA">Seluruh diagonal bidang, diagonal sisi dan diagonal ruang memiliki panjang yang sama</td>
+            </tr>
+            <tr>
+              <td bgcolor="#F5FFFA">4</td>
+              <td bgcolor="#F5FFFA">Seluruh bidang diagonal pada kubus berbentuk persegi panjang</td>
+            </tr>
+          </table></center>
+        
+        <br></br>
+          <h2>C.  Jaring-Jaring Kubus</h2>
+          <center><img src="https://i.postimg.cc/RZ0MDQj0/pmm-3.png" width ="300px" height="235px"></center>
+            <center><font size="2">Jaring-jaring Kubus</font></center>
+            <font size="4"><p style="text-indent: 30px;">Jika kubus dipotong berdasarkan rusuk-rusuknya, kemudian masing-masing sisinya direntangkan maka akan menghasilkan suatu bangun datar yang biasa disebut jaring-jaring kubus. Pada bangun ruang kubus terdapat 12 macam jarring-jaring kubus dan susunannya berbeda satu sama lain.</p></font>
+            <center><img src="https://i.postimg.cc/tgCwsNxP/pmm-4.png" width ="300px" height="310px"></center>
+            <center><font size="2">Macam-macam Jaring-jaring Kubus</font></center>
+        
+        <br></br>
+          <h2>D. Luas Kubus</h2>
+          <font size="4"><p style="text-indent: 30px;">Untuk mencari luas permukaan kubus, kita dapat melihat dari jarring-jaring kubus terlebih dahulu.</p></font>
+          <center><img src="https://i.postimg.cc/pXzg4Tv9/pmm-5.png" width ="480px" height="310px"></center>
+            <center><font size="2">Luas Kubus</font></center>
+          <font size="4"><p style="text-indent: 30px;">Dari dambar diatas, misalkan Panjang rusuk tersebut adalah s, maka dapat kita lihat dari gambar jarring-jaring kubus bahwa luas 1 sisi kubus adalah  s x s = s<sup>2</sup>. Karen kubus memiliki 6 sisi maka L = 6 x s<sup>2</sup> = 6s<sup>2</sup></p></font>
+        
+        <br></br>
+          <h2>E. Unsur-unsur Kubus</h2>
+          <ul class="unsurkubus"></ul>
+                 <font size="4"><li style="text-indent: 30px;">Titik Sudut Kubus</li></font>
+                <font size="4"><p style="text-indent: 55px;">Titik sudut kubus adalah titik potong atau titik temu dari ketiga rusuk atau lebih. Titik sudut pada kubus berjumlah 8 titik. Pada kubus ABCD.EFGH terdapat 8 buat titik sudut, yakni : A, B, C, D, E, F, G, H.</p></font>
+                <center><img src="https://i.postimg.cc/L61wDy4S/pmm-6.png" width ="360px" height="310px"></center>
+            <center><font size="2">Titik Sudut pada Kubus</font></center>
+                 <font size="4"><li style="text-indent: 30px;">Rusuk</li></font>
+                 <font size="4"><p style="text-indent: 55px;">Rusuk adalah garis potong antara sisi-sisi kubus. Kubus memiliki 12 rusuk sama Panjang. Rusuk pada kubus ABCD.EFGH yaitu:</p></font>
+                 <center><img src="https://i.postimg.cc/c1jPQqST/pmm-7.png" width ="360px" height="330px"></center>
+            <center><font size="2">Rusuk pada Kubus</font></center>
+             <font size="4"><p style="text-indent: 55px;">Rusuk Alas : AB, BC, CD, AD</p>
+              <p style="text-indent: 55px;">Rusuk Tegak : AE, BF, CG, DH</p>
+              <p style="text-indent: 55px;">Rusuk Atas : EF, FG, GH, EH.</p></font>
+                 <font size="4"><li style="text-indent: 30px;">Bidang/Sisi</li></font>
+                 <font size="4"><p style="text-indent: 55px;">Bidang atau sisi pada kubus adalah persegi yang membatasi bangun ruang kubus dan memiliki 6 buah bidang atau sisi. Bidang atau sisi pada kubus ABCD.EFGH yaitu:</p></font>
+                 <center><img src="https://i.postimg.cc/MpJ4FyXQ/pmm-8.png" width ="400px" height="330px"></center>
+            <center><font size="2">Bidang/Sisi pada Kubus</font></center>
+            <font size="4"><p style="text-indent: 55px;">Sisi alas = ABCD</p>
+              <p style="text-indent: 55px;">Sisi alas = EFGH</p>
+              <p style="text-indent: 55px;">Sisi alas = ABEF</p>
+              <p style="text-indent: 55px;">Sisi alas = CDGH</p>
+              <p style="text-indent: 55px;">Sisi alas = ADEH</p>
+              <p style="text-indent: 55px;">Sisi alas = BCFG</p></font>
+                 <font size="4"><li style="text-indent: 30px;">Diagonal Sisi Kubus</li></font>
+                 <font size="4"><p style="text-indent: 55px;">Diagonal sisi pada kubus adalah garis yang menghubungkan dua titik sudut sebidang dan saling berhadapan pada sebuah sisi kubus dan memiliki 12 diagonal sisi yang sama Panjang.</p>
+                  <p>Pada kubus ABCD.EFGH diagonal sisinya yaitu: AC, BD, EG, FH, AF, BE, CH, DG, BG, CF, AH, DE. Panjang diagonal sisi AC = BD = EG = HF = AF = BE = CH = DG = AH = DE = BG = CF.</p></font>
+                 <center><img src="https://i.postimg.cc/fR7FnJ0g/pmm-9.png" width ="650px" height="168px"></center>
+            <center><font size="2">Diagonal Sisi pada Kubus</font></center>
+                 <font size="4"><li style="text-indent: 30px;">Diagonal Ruang</li></font>
+                 <font size="4"><p style="text-indent: 55px;">Diagonal ruang kubus adalah garis yang enghubungkan dua titik sudut yang tidak sebidang dan diagonal ruang kubus berpotongan di tengah-tengah kubus dan memiliki 4 buah diagonal ruang yang sama Panjang.</p>
+                  <p>Pada kubus, ABCD.EFGH diagonal ruangnya yaitu : CE, AG, BH, DF dan Panjang diagonal ruang AG = BH = CE = DF.</p></font>
+                  <center><img src="https://i.postimg.cc/CKF2FSGM/pmm-10.png" width ="650px" height="230px"></center>
+            <center><font size="2">Diagonal Ruang pada Kubus</font></center>
+                 <font size="4"><li style="text-indent: 30px;">Bidang Diagonal</li></font>
+                 <font size="4"><p style="text-indent: 55px;">Bidang diagonal kubus adalah bidang yang berbentuk segiempat (persegi panjang) yang melintang di dalam ruang kubus. Kubus memiliki 6 buah bidang diagonal yang sama besar.</p>
+                 <p>Pada kubus ABCD.EFGH bidang diagonalnya yaitu : ABGH, EFCD, BCHE, FGDA, BFHG, dan AEGC.</p></font>
+                 <center><img src="https://i.postimg.cc/C51JRsJz/pmm-11.png" width ="650px" height="275px"></center>
+            <center><font size="2">Bidang Diagonal pada Kubus</font></center>
+        
+        <br></br>
+            <h2>F. Volume Kubus</h2>
+            <center><img src="https://i.postimg.cc/k5vSpW1j/pmm-12.png" width ="250px" height="190px"></center>
+            <center><font size="2">Volume pada Kubus</font></center>
+          <font size="4"><p style="text-indent: 30px;">Untuk menghitung volume kumus, yang kita butuhkan adalah menghitung Panjang x lebar x tinggi. Namun, karena Panjang rusuk kubus semuanya sama, cara lain untuk menghitung volume kubus adalah s^3, yaitu s adalah Panjang rusuk kubus.</p></font>
+        
+        <br></br>
+          <h2>G. Video Pembelajaran Kubus</h2>
+          <center>
+            <iframe style="width: 870px;height: 490px;"type="text/html" src="https://www.youtube.com/embed/ZVQMGD577Fo?autoplay=1&origin=wibloog.com" frameborder="5"></iframe>
+          </center>
+        
+        <br></br>
+          <h2>H. Latihan Soal Kubus</h2>
+          <font size="4">
+                <p style="text-indent: 30px;">1. Sebuah bak mandi berbentuk kubus dengan panjang sisi bagian dalam adalah 90cm. jika bak mandi terisi 4/5 bagian dengan air. Tentukan berapa volume air didalam bak mandi tersebut!</p>
+                <p style="text-indent: 30px;">2. Suatu kubus diketahui volumenya adalah 729 cm³. Tentukan luas permukaan kubus tersebut!</p>
+                <p style="text-indent: 30px;">3. Pak Joko hendak membuat kendang ayam berbentuk kubus dengan kerangka yang terbuat dari besi. Panjang sisi kendang yang direncanakan adalah 30cm. jika pak budi memiliki bahan besi sepanjang 25 meter. Tentukan jumlah kendang yang dapat dibuat!</p>
+                <p style="text-indent: 30px;">4. Sebuah bak mandi berbentuk kubus dengan ukuran Panjang sisi 75cm. jika bak mandi diisi dengan air kran yang memiliki debit 600  cm³⁄detik. Tentukan waktu yang diperlukan untuk menisci bak mandi dari kondisi kosong hingga penuh!</p>
+                <p style="text-indent: 30px;">5. Sebuah kubus dengan rusuk p diperkecil sedemikian rupa sehingga menjadi kubus 1⁄3 p. Panjang diagonal kubus itu 6√3. Panjang kubus semula adalah!</p>
+                <p style="text-indent: 30px;">6. Sebuah kubus memiliki rusuk yang panjangnya 15 cm. Volume dan luas permukaan kubus tersebut adalah...</p>
+                <p style="text-indent: 30px;">7. Paman memiliki kandang jangkrik berbentuk kubus dengan kerangka terbuat dari besi dan permukaannya dari bahan kawat. Jika panjang sisi kandang 75 cm, maka keliling dan luas permukaan kandang adalah...</p>
+                <p style="text-indent: 30px;">8. Jika sebuah aquarium yang berbentuk kubus volumenya 729 liter, maka tinggi aquarim tersebut adalah ... cm</p>
+                <p style="text-indent: 30px;">9. Sebuah kolam renang berbentuk kubus dengan kedalaman 3 meter. Volume kolam renang tersebut adalah .... m³</p>
+                <p style="text-indent: 30px;">10. Kakak sedang menyusun kotak kue berbentuk kubus. Agar terkesan rapi, ia menyusun kotak kue tersebut menjadi kubus yang berukuran lebih besar. Panjang sisi kubus besar yang dibuat kakak adalah 8 buah kotak kue. Berapa jumlah kotak kue yang disusun kakak untuk membentuk kubus besar?</p>
+            </font>
+        
+        </section>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      </body>
+    </html>
